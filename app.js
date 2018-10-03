@@ -16,3 +16,9 @@ const config = {
  
 var nms = new NodeMediaServer(config)
 nms.run();
+const express = require('express');
+const app = express();
+app.get('/',(req,res)=>{
+  res.send({msv:"Wellcom to server"});
+})
+app.listen(process.env.PORT);
